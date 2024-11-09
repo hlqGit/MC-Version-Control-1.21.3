@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "mc-version-control",
+	"version": "${version}",
+	"name": "MC Version Control",
+	"description": "Enables version control for your minecraft worlds!",
+	"authors": [
+		"hlq!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "GNU General Public License v3.0",
+	"icon": "assets/mc-version-control/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dev.hlq.versioncontrol.MCVersionControl"
+		],
+		"fabric-datagen": [
+			"dev.hlq.versioncontrol.MCVersionControlDataGenerator"
+		],
+		"client": [
+			"dev.hlq.versioncontrol.MCVersionControlClient"
+		]
+	},
+	"mixins": [
+		"mc-version-control.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.3",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
